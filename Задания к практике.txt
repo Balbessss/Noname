@@ -1,0 +1,67 @@
+№1
+
+while(True):
+    a = input("Введите первое число: ")
+    b = input("Введите второе число: ")
+
+    def add(x,y):
+        x = float(x)
+        y = float(y)
+        return x + y
+    if (a.isdigit() == True and b.isdigit() == True):
+        print("Сумма равна: ", add(a,b))
+    else:print('Error')
+    if(a == 'stop' or b == 'stop'):break
+
+while(True):
+    a = input("Введите первое число: ")
+    b = input("Введите второе число: ")
+
+    def add(x,y):
+        return x + y
+
+    if(a == 'stop' or b == 'stop'):break
+    try:
+        a = float(a)
+        b = float(b)
+        
+    except:
+        print('Error!')
+    else:
+        print(add(a,b))
+№2
+
+import random
+
+lst = [random.randint(1,1000) for i in range(100)]
+print(lst)
+
+def crsp(org_lst):
+    new_lst = []
+    for item in org_lst:
+        if (item % 2 == 0):
+            new_lst.append(item)
+    return new_lst
+
+new_lst = crsp(lst)
+print (new_lst)
+
+№3
+def two_funct(org_lst):
+    new_lst = []
+    for item in org_lst:
+        new_lst.append(2*item)
+    return new_lst
+
+при условии того что числа следуют по очереди
+def f_funct(org_list):
+    new_lst = []
+    for i in range(2,100,2):
+        new_lst.append(i)
+    return new_lst
+
+№4
+list_1 = ['grer']
+list_1.append(list_1)
+
+py -m pydoc -b
